@@ -14,29 +14,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         editText = (EditText) findViewById(R.id.txt);
         chkBold = (CheckBox) findViewById(R.id.chkBold);
         chkItalic = (CheckBox) findViewById(R.id.chkItalic);
+
         chkBold.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 if (chkBold.isChecked())
                     editText.setTypeface(null, Typeface.BOLD);
                 else
                     editText.setTypeface(null, Typeface.NORMAL);
             }
         });
-        chkBold.setOnClickListener(new View.OnClickListener() {
+        chkItalic.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                if (chkBold.isChecked())
+            public void onClick(View v) {
+                if (chkItalic.isChecked())
                     editText.setTypeface(null, Typeface.ITALIC);
                 else
                     editText.setTypeface(null, Typeface.NORMAL);
             }
-                
-
-        });
+        }) ;
     }
 
 }
