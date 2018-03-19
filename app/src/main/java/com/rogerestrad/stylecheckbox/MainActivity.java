@@ -22,8 +22,12 @@ public class MainActivity extends AppCompatActivity {
         chkBold.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (chkBold.isChecked())
+                if (chkBold.isChecked()) {
                     editText.setTypeface(null, Typeface.BOLD);
+                    if (chkBold.isChecked()&& chkItalic.isChecked()) {
+                        editText.setTypeface(null, Typeface.BOLD + Typeface.ITALIC);
+                    }
+                }
                 else
                     editText.setTypeface(null, Typeface.NORMAL);
             }
@@ -31,12 +35,16 @@ public class MainActivity extends AppCompatActivity {
         chkItalic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (chkItalic.isChecked())
+                if (chkItalic.isChecked()){
                     editText.setTypeface(null, Typeface.ITALIC);
+                    if (chkBold.isChecked()&& chkItalic.isChecked())
+                    editText.setTypeface(null, Typeface.BOLD + Typeface.ITALIC);
+                }
                 else
                     editText.setTypeface(null, Typeface.NORMAL);
             }
-        }) ;
+        }
+        ) ;
     }
 
 }
