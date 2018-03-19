@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     EditText editText;
+
     CheckBox chkBold,chkItalic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
